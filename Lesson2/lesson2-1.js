@@ -1,4 +1,4 @@
-
+const _=require('../underscore/node_modules/underscore/underscore.js')._;
 /*列表的抽象数据类型定义
 listSize（属性）    列表的元素个数 
 pos  （属性）       列表的当前位置 
@@ -57,7 +57,7 @@ function clear(){
 //在列表中查找某一元素
 function find(element){
 	for(let i=0;i<this.dataStore.length;i++){
-		if (element == this.dataStore[i]) {
+		if (_.isEqual(element,this.dataStore[i])) {
 			return i;
 		}
 	}

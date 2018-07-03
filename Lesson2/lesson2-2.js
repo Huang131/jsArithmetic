@@ -1,7 +1,7 @@
 
 const fs=require('fs');//调用fs函数库
 const List=require('./lesson2-1.js');//调用List
-
+const _=require('../underscore/node_modules/underscore/underscore.js')._;
 //异步读取
 /*fs.readFile('films.txt','utf-8',function(err,data){
 	if (err) {
@@ -48,6 +48,18 @@ function checkOut(name,movice,moviceList,customerList){
 	}
 }
 
+//当客户归还一部影片时，将该影片从客戶列表中删除,同时添加到现有影片列表中。
+function checkIn(name,movice,movieList,customerList){
+	let c=new Customer(name,movice);
+
+	if(customerList.contains(c)){
+		movieList.append(movice);
+		customerList.remove(c);
+	}else{
+		console.log(name+" 沒有租借 "+movice);
+	}
+}
+
 
 //显示清单
 function displayList(list){
@@ -75,9 +87,14 @@ displayList(movieList);
 
 
 checkOut("blsm","(14) Inception（《盗梦空间》）",movieList,customerList);
+checkOut("blsm","(18) The Matrix（《黑客帝国》）",movieList,customerList);
+checkOut("blsm","(19) Forrest Gump（《阿甘正传》）",movieList,customerList);
 console.log("\n客户清单:");
 displayList(customerList);
 
+checkIn("blsm","(18) The Matrix（《黑客帝国》）",movieList,customerList);
+console.log("\n客户清单:");
+displayList(customerList);
 
 
 
