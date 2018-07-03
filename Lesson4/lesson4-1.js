@@ -69,7 +69,7 @@ console.log("Back of queue:"+q.back());
 
 //队列的使用:方块舞的舞伴分配问题
 
-//武者信息存储在Dancer对象中
+//舞者信息存储在Dancer对象中
 function Dancer(name,sex)
 {
 	this.name=name;
