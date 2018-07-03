@@ -51,8 +51,6 @@ console.log(test.show());*/
 const cycList=require('./lesson5-2.js');
 
 /**
- * @Author    Huang
- * @DateTime  2018-07-03
  * @param     cycList 		链表
  * @param      n       		移动数
  * @param      m      		剩余人数
