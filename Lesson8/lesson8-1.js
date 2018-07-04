@@ -34,9 +34,6 @@ function remove(data){
 	}
 }
 
-function size(){
-
-}
 
 //并集
 function union(set){
