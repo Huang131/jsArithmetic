@@ -1,4 +1,5 @@
 
+
 function Dictionary()
 {
 	this.dataStore=new Array();
